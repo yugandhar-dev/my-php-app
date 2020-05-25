@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Display Employees page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="sessions.js"></script>
+    <script src="script.js"></script>
+    <script src="jsonScript.js"></script>
+  </head>
+  <body onload="getSessions()">
+    <div class="main-container">
+      <div id="nav-bar"></div>
+      <div class="table-container">
+        <h1 class="display-heading">
+          Employee details from both json file and database table
+        </h1>
+        <table id="myDisplayTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>User page</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+    <script src="sessions.js"></script>
+    <script src="empScript.js"></script>
+  </head>
+  <body onload="getSessions()">
+    <div class="main-container">
+      <div id="nav-bar"></div>
+      <div class="search-container">
+        <h1 class="searchHeading">Search Employee</h1>
+        <label for="firstname">Firstname</label>
+        <input
+          type="text"
+          id="fName"
+          name="firstname"
+          autocomplete="off"
+          required
+        />
+        <label for="firstname">Lastname</label>
+        <input
+          type="text"
+          id="lName"
+          name="lastname"
+          autocomplete="off"
+          required
+        />
+        <button class="searchbtn" onclick="getEmployee()">Search</button>
+      </div>
+      <div class="emp-container">
+        <p id="message"></p>
+        <table id="myTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

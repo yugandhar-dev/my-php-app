@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>User page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#nav-bar").load("nav.html");
+      });
+    </script>
+    <script src="sessions.js"></script>
+    <script src="./insert.js"></script>
+  </head>
+  <body onload="getSessions()">
+    <div class="main-container">
+      <div id="nav-bar"></div>
+
+      <div class="insert-form">
+        <h1 class="insert-heading">Insert new employee</h1>
+        <label for="empId">Employee ID</label>
+        <input
+          type="text"
+          name="empId"
+          id="EmpId"
+          autocomplete="off"
+          required
+        />
+        <label for="firstname">Firstname</label>
+        <input
+          type="text"
+          name="firstname"
+          id="fname"
+          autocomplete="off"
+          required
+        />
+        <label for="lastname">Lastname</label>
+        <input
+          type="text"
+          name="lastname"
+          id="lname"
+          autocomplete="off"
+          required
+        />
+        <p id="error-msg"></p>
+        <h4>Choose below options to insert employee</h4>
+        <button type="submit" onclick="insertJson()" id="json-btn">
+          employees.json
+        </button>
+        <button type="submit" onclick="insertTable()" id="db-btn">
+          employee table in DB
+        </button>
+        <p id="insert-message"></p>
+      </div>
+    </div>
+  </body>
+</html>
